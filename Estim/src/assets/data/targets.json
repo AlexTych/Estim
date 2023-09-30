@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Vehicle",
+        "priority": 1,
+        "cost": 50000
+    },
+    {
+        "name": "House down payment",
+        "priority": 3,
+        "cost": 100000
+    },
+    {
+        "name": "Phone",
+        "priority": 2,
+        "cost": 1000
+    },
+    {
+        "name": "Hawaii",
+        "priority": 3,
+        "cost": 5000
+    },
+    {
+        "name": "Books",
+        "priority": 3,
+        "cost": 300
+    },
+    {
+        "name": "Toster",
+        "priority": 1,
+        "cost": 300
+    },
+    {
+        "name": "Fryer",
+        "priority": 3,
+        "cost": 500
+    },
+    {
+        "name": "Coffee machine",
+        "priority": 1,
+        "cost": 2000
+    },
+    {
+        "name": "Drone",
+        "priority": 2,
+        "cost": 2050
+    }
+]

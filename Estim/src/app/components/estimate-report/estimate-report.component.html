@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-content class="estimate-card-content">
+        <h4 class="estimate-title">Time-to-Target calculator</h4>
+        <div class="estimate-header d-flex flex-row">
+            <mat-form-field>
+                <mat-label>Monthly Income</mat-label>
+                <input type="number" matInput [formControl]="incomeControl">
+                <mat-error *ngIf="incomeControl.hasError('min')">Income must be non-negative</mat-error>
+                <mat-error *ngIf="incomeControl.hasError('notStartingWithZero')">Income can not be
+                    0</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Savings</mat-label>
+                <input type="number" matInput [formControl]="savingsControl">
+                <mat-error *ngIf="savingsControl.hasError('min')">Savings must be non-negative</mat-error>
+            </mat-form-field>
+            <div class="d-flex flex-column">
+                <button class="estimate-calculate-button" mat-raised-button (click)="calculateEstimateDuration(true)">Calculate</button>
+                <button class="estimate-clear-button" mat-raised-button (click)="clearValues()">Clear</button>
+            </div>
+        </div>
+        <div *ngIf="tableElemets && tableElemets.length > 0; else noData" cdkDropList class="estimate-drop-list"
+            (cdkDropListDropped)="drop($event)">
+            <div class="estimate-list-box" *ngFor="let element of tableElemets" cdkDrag>
+                <span>{{ element.name }}</span>
+                <span>{{ element.duration !== undefined ? element.duration : 0 }} Months</span>
+            </div>
+        </div>
+        <ng-template #noData>
+            <app-no-data [message]="noDataMessage"></app-no-data>
+        </ng-template>
+    </mat-card-content>
+</mat-card>

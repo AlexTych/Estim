@@ -1,0 +1,57 @@
+.expense-table {
+  max-height: 65vh;
+  overflow: auto;
+}
+
+.expense-table-actions {
+  width: 100px;
+  text-align: center;
+}
+
+.expense-table-category {
+  width: 100px;
+  text-align: center;
+}
+
+.expense-table-category i {
+  padding-right: 15px;
+}
+
+.expense-table-actions div {
+  align-items: center;
+}
+
+.expense-table-actions i {
+  color: #673ab7;
+}
+
+.mat-column-position {
+  width: 70px;
+  border-right-color: var(--mat-table-row-item-outline-color, rgba(0, 0, 0, 0.12));
+  border-right-width: var(--mat-table-row-item-outline-width, 1px);
+  border-right-style: solid;
+}
+
+table {
+  border-collapse: separate !important;
+}
+
+.expenses-button-block button {
+  min-width: 50px;
+  height: 30px;
+}
+
+.expenses-button-block {
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.expenses-card-title {
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+tr:nth-child(odd) {
+  background: #edf1f5
+}

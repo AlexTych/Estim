@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Target",
+        "cost": 1500,
+        "category": 4
+    },
+    {
+        "name": "Gas",
+        "cost": 50,
+        "category": 2
+    },
+    {
+        "name": "Electricity",
+        "cost": 100,
+        "category": 2
+    },
+    {
+        "name": "Biagis",
+        "cost": 200,
+        "category": 5
+    },
+    {
+        "name": "Internet",
+        "cost": 110,
+        "category": 3
+    },
+    {
+        "name": "Phone",
+        "cost": 180,
+        "category": 3
+    },
+    {
+        "name": "Subscriptions",
+        "cost": 50,
+        "category": 3
+    },
+    {
+        "name": "Gym",
+        "cost": 210,
+        "category": 3
+    },
+    {
+        "name": "Car insurance",
+        "cost": 130,
+        "category": 3
+    },
+    {
+        "name": "Cat food",
+        "cost": 100,
+        "category": 3
+    },
+    {
+        "name": "Vet",
+        "cost": 100,
+        "category": 3
+    },
+    {
+        "name": "Rent",
+        "cost": 2200,
+        "category": 1
+    },
+    {
+        "name": "Vehicle credit",
+        "cost": 950,
+        "category": 3
+    },
+    {
+        "name": "Health ins",
+        "cost": 260,
+        "category": 3
+    },
+    {
+        "name": "Furniture",
+        "cost": 650,
+        "category": 3
+    },
+    {
+        "name": "Books",
+        "cost": 500,
+        "category": 6
+    }
+]

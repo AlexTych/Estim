@@ -1,0 +1,22 @@
+<header class="header universal-header d-flex flex-row justify-content-between">
+    <div class="header-menu">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <i style="color: #fcfcfc;" class="fa-solid fa-bars"></i>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button *ngFor="let page of navPages" mat-menu-item [routerLink]="page.link" routerLinkActive="router-link-active" >
+                <i style="margin-right: 10px;" [ngClass]="page.icon"></i>
+                <span>{{page.text}}</span>
+            </button>
+        </mat-menu>
+    </div>
+    <div class="header-logo">
+        <a href="#" routerLink="/estimator">
+            <img src="assets/logo.png">
+        </a>
+    </div>
+    <div *ngIf="userName" class="header-user d-flex flex-row justify-content-end">
+        <span><i class="fa fa-solid fa-user"></i></span>
+        <span>{{userName}}</span>
+    </div>
+</header>

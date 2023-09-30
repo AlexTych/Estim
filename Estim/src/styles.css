@@ -1,0 +1,112 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@fortawesome/fontawesome-pro/css/all.min.css";
+
+html, body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+	box-sizing: border-box;
+    overflow: hidden;
+}
+
+div {
+	box-sizing: border-box;
+}
+
+span {
+	white-space: nowrap;
+}
+
+
+.mat-drawer-inner-container {
+    display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.mat-mdc-dialog-actions {
+    justify-content: end !important;
+}
+
+.mdc-dialog__actions {
+	padding-bottom: 15px !important;
+}
+
+.mdc-button--raised {
+    width: 5em;
+	margin-right: 18px;
+}
+
+.mdc-dialog .mdc-dialog__content {
+    padding: 20px 24px 0px 24px !important;
+}
+
+.mat-mdc-button .mdc-button__label {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-mdc-menu-item .mdc-list-item__primary-text {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+th {
+    font-size: 14px;
+    font-weight: 500;
+}
+td {
+    color: #686868;
+    font-size: 14px;
+}
+
+.custom-scrollbar {
+	scrollbar-width: thin;
+	scrollbar-color: #888888 #f0f0f0 !important;
+}
+
+/* Track */
+.custom-scrollbar::-webkit-scrollbar {
+	width: 8px;
+    height: 8px;
+}
+
+/* Handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+	background: #888888;
+	border-radius: 8px;
+}
+
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #585858;
+}
+
+.oops-gif {
+    height: 85vh; 
+    width: 60vw;
+    align-self: center;
+}
+
+@media (max-width: 950px) {
+    .oops-gif {
+        height: 50vh;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .oops-gif {
+        height: 70vh;
+        width: 60vw;
+    }
+}

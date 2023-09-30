@@ -1,0 +1,10 @@
+<mat-dialog-content>
+  <i class="fa fa-solid fa-user"></i>
+  <mat-form-field style="padding-top: 20px;">
+    <mat-label>Please enter your name</mat-label>
+    <input type="text" matInput [(ngModel)]="userName">
+  </mat-form-field>
+</mat-dialog-content>
+<div mat-dialog-actions>
+  <button mat-raised-button [mat-dialog-close]="userName">OK</button>
+</div>

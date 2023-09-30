@@ -1,0 +1,11 @@
+footer {
+    background: #fff;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+footer a{
+    margin-right: 1em;
+}

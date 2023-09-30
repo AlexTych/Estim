@@ -1,0 +1,13 @@
+.travel-main-container{
+    min-height: 93vh;
+    background-color: #edf1f5;
+    width: calc(100vw - 250px);
+    overflow: hidden;
+    padding: 1% 15% 0 15%;
+}
+
+@media (max-width: 950px) {
+    .travel-main-container {
+        width: 100vw;
+    }
+}

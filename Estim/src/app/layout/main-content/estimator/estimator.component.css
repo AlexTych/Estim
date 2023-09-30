@@ -1,0 +1,132 @@
+.estimator-main-container {
+  min-height: 93vh;
+  background-color: #edf1f5;
+  width: calc(100vw - 250px);
+  overflow: hidden;
+  padding: 1% 15% 0 15%;
+}
+
+.estimator-target-report {
+  margin-right: 20px;
+}
+
+.target-total-box,
+.expenses-total-box {
+  margin-left: 20px;
+}
+
+.estimator-target-box,
+.target-total-box-sum>div,
+.estimator-target-chart,
+.expenses-total-box-sum>div {
+  margin-top: 20px;
+}
+
+.expenses-total-box-sum {
+  margin-bottom: 20px;
+}
+
+total-block:first-child {
+  padding-right: 20px;
+}
+
+@media (max-width: 700px) {
+  total-block:first-child {
+    padding-right: 0px;
+  }
+
+  .total-block,
+  .expenses-total-box,
+  .target-total-box,
+  .target-list-box,
+  .expenses-list-box {
+    width: 100% !important;
+  }
+
+  .expenses-total-box,
+  .target-total-box {
+    margin-left: 0px !important;
+  }
+
+  .estimator-expenses-box,
+  .estimator-target-box,
+  .target-total-box-sum div,
+  .expenses-total-box-sum div {
+    flex-flow: column !important;
+  }
+
+  .target-total-box-sum>div:nth-child(2),
+  .target-total-box-sum,
+  .expenses-total-box-sum>div:nth-child(2) {
+    margin-top: 0px !important;
+  }
+
+  .expenses-total-box-sum,
+  .target-total-box-sum>div>total-block:nth-child(2),
+  .total-block,
+  .expenses-total-box-sum>div>total-block:nth-child(2) {
+    margin-top: 20px !important;
+  }
+}
+
+@media (max-width: 950px) {
+  .estimator-main-container {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .target-priority-block {
+    padding-top: 20px;
+  }
+
+  .estimator-target-chart,
+  .estimator-target-report {
+    width: 100% !important;
+  }
+
+  .estimator-target-report-box {
+    flex-flow: column !important;
+  }
+
+  .estimator-target-chart {
+    margin-top: 20px !important;
+  }
+}
+
+@media (max-width: 1600px) {
+
+  .target-list-box,
+  .target-total-box-sum {
+    margin-bottom: 20px;
+  }
+
+  .estimator-target-box {
+    margin-top: 0px;
+  }
+
+  .expenses-list-box,
+  .target-list-box,
+  .target-total-box,
+  .expenses-total-box {
+    width: 100% !important;
+  }
+
+  .expenses-total-box,
+  .target-total-box {
+    margin-left: 0px !important;
+  }
+
+  .estimator-target-box,
+  .estimator-expenses-box {
+    flex-flow: column !important;
+  }
+
+  .expenses-total-box-sum {
+    margin-top: 20px;
+  }
+
+  .estimator-target-chart {
+    margin-top: 0px;
+  }
+}

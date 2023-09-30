@@ -1,0 +1,38 @@
+<span mat-dialog-title>{{title}}</span>
+<mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input type="text" matInput [(ngModel)]="item.name" required>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Cost</mat-label>
+        <input type="number" [max]="maxAllowedCost" matInput [formControl]="itemCostControl" (change)="onCostChange()" required>
+        <mat-error *ngIf="itemCostControl.hasError('min')">Cost must be non-negative</mat-error>
+        <mat-error *ngIf="itemCostControl.hasError('notStartingWithZero')">Cost can not be
+            0</mat-error>
+    </mat-form-field>
+    <ng-container *ngIf="data.dataType == 0; else categoryBlock">
+        <mat-form-field>
+            <mat-label>Priority</mat-label>
+            <mat-select [(ngModel)]="item.priority">
+                <mat-option *ngFor="let priority of priorities" [value]="priority">
+                    {{getPriorityText(priority)}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </ng-container>
+    <ng-template #categoryBlock>
+        <mat-form-field>
+            <mat-label>Category</mat-label>
+            <mat-select [(ngModel)]="item.category">
+                <mat-option *ngFor="let category of categories" [value]="category">
+                    {{getCategoryText(category)}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </ng-template>
+</mat-dialog-content>
+<div mat-dialog-actions>
+    <button mat-raised-button [mat-dialog-close]="item" [disabled]="okDisabled()">OK</button>
+    <button mat-raised-button [mat-dialog-close]="undefined">Cancel</button>
+</div>

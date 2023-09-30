@@ -1,0 +1,13 @@
+<mat-card class="h-100">
+    <div class="main-nav-bar-box">
+        <ul>
+            <li *ngFor="let page of navPages; let idx = index" (click)="onNavSelect(idx)">
+                <a [ngStyle]="{'color': page?.color}" [routerLink]="page?.link" routerLinkActive="active">
+                    <i [ngClass]="page?.icon"></i>
+                    <span>{{page?.text}}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <nav-bar-footer></nav-bar-footer>
+</mat-card>

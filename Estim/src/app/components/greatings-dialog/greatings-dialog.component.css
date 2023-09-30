@@ -1,0 +1,11 @@
+mat-dialog-content {
+    display: flex; 
+    flex-flow: row; 
+    justify-content: center; 
+    align-items: center;
+}
+
+mat-dialog-content i{
+    font-size: 50px; 
+    margin-right: 10px
+}

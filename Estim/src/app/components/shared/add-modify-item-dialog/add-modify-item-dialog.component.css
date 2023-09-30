@@ -1,0 +1,11 @@
+mat-dialog-content {
+    display: flex;
+    flex-flow: column;
+}
+
+.mat-mdc-raised-button {
+	margin-top: 5px;
+	margin-left: 4px;
+	margin-right: 4px;
+	min-width: 80px;
+}

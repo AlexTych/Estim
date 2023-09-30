@@ -1,0 +1,55 @@
+.target-table {
+  max-height: 40vh;
+  overflow: auto;
+}
+
+.target-table-actions {
+  width: 100px;
+  text-align: center;
+}
+
+.target-table-priority{
+  width: 80px;
+  text-align: center;
+}
+
+.target-table-priority i {
+  padding-right: 10px;
+}
+
+.target-table-actions div { 
+  align-items: center;
+}
+
+.target-table-actions i {
+  color: #673ab7;
+}
+
+.mat-column-position {
+  width: 70px;
+  border-right-color: var(--mat-table-row-item-outline-color, rgba(0, 0, 0, 0.12));
+  border-right-width: var(--mat-table-row-item-outline-width, 1px);
+  border-right-style: solid;
+}
+
+table {
+  border-collapse: separate !important;
+}
+
+.targets-button-block button {
+  min-width: 50px;
+  height: 30px;
+}
+
+.targets-button-block{
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.targets-card-title {
+  font-size: 14px;
+  margin: 0px;
+  font-weight: 500;
+}
+
+tr:nth-child(odd) {background: #edf1f5}

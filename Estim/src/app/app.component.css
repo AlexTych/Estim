@@ -1,0 +1,17 @@
+.main-box {
+	display: flex;
+	flex-flow: column;
+}
+
+.main-content {
+	overflow: hidden;
+	display: flex;
+	flex-flow: row;
+	min-height: 93vh;
+}
+
+.page-content {
+	overflow-y: auto;
+	overflow-x: hidden;
+	max-height: 93vh;
+}

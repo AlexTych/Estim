@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-content class="total-block-card p-3 d-flex align-items-center">
+        <i [ngStyle]="{'background-color': totalEl.backgroundColor, 'color': totalEl.color}" class="fa-solid fa-circle-dollar fa-xl"></i>
+        <div class="total-block-card-text d-flex flex-column">
+            <span>
+                ${{totalEl.count | number}}
+            </span>
+            <span>
+                {{totalEl.text}}
+            </span>
+        </div>
+    </mat-card-content>
+</mat-card>

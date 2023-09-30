@@ -1,0 +1,19 @@
+a {
+    text-decoration: none;
+}
+
+span{
+    color: #686868;
+}
+
+.breadcrumb-item-box{
+    flex-flow: row;
+    align-items: center;
+    display: none;
+}
+
+@media (max-width: 950px) {
+    .breadcrumb-item-box{
+		display: inline-block;
+	}
+}

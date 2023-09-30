@@ -1,0 +1,46 @@
+{
+  "lowTotal": {
+    "text": "Low",
+    "count": 0
+  },
+  "mediumTotal": {
+    "text": "Medium",
+    "count": 0
+  },
+  "highTotal": {
+    "text": "High",
+    "count": 0
+  },
+  "targetsTotal": {
+    "text": "Total",
+    "count": 0
+  },
+  "expensesTotal": {
+    "text": "Total",
+    "count": 0
+  },
+  "housingTotal": {
+    "text": "Housing",
+    "count": 0
+  },
+  "utilitiesTotal": {
+    "text": "Utilities",
+    "count": 0
+  },
+  "billsTotal": {
+    "text": "Bills",
+    "count": 0
+  },
+  "groceriesTotal": {
+    "text": "Groceries",
+    "count": 0
+  },
+  "restaurantsTotal": {
+    "text": "Restaurants",
+    "count": 0
+  },
+  "otherTotal": {
+    "text": "Other",
+    "count": 0
+  }
+}

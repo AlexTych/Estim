@@ -1,0 +1,54 @@
+<mat-card>
+    <mat-card-content class="h-100">
+        <div class="targets-card-header d-flex flex-row justify-content-between">
+            <span class="targets-card-title">Target List</span>
+            <div class="targets-button-block d-flex flex-row">
+                <button mat-raised-button (click)="addModifyTarget()">Add</button>
+                <button mat-raised-button (click)="resetValues()">Reset</button>
+            </div>
+        </div>
+        <section class="target-table custom-scrollbar">
+            <table mat-table matSort [dataSource]="dataSource">
+                <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef> No. </th>
+                    <td mat-cell *matCellDef="let element; let rowIndex = index"> {{rowIndex+1}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="cost">
+                    <th mat-header-cell mat-sort-header mat-sort-header *matHeaderCellDef> Cost </th>
+                    <td mat-cell *matCellDef="let element"> ${{element.cost}} </td>
+                </ng-container>
+                
+                <ng-container matColumnDef="priority">
+                    <th class="target-table-priority" mat-header-cell mat-sort-header *matHeaderCellDef> Priority </th>
+                    <td class="target-table-priority" mat-cell *matCellDef="let element">
+                        <i [matTooltip]="getPriorityText(element.priority)" [ngStyle]="{'color': getPriorityColor(element.priority)}" class="fa-solid fa-circle"></i>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="actions">
+                    <th class="target-table-actions" mat-header-cell *matHeaderCellDef>
+                        Actions </th>
+                    <td class="target-table-actions" mat-cell *matCellDef="let element; let rowIndex = index">
+                        <div class="d-flex flex-row justify-content-between">
+                            <button mat-icon-button (click)="addModifyTarget(element, rowIndex)" matTooltip="Modify">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button mat-icon-button (click)="removeTarget(element.name, rowIndex)" matTooltip="Delete">
+                                <i class="fa-solid fa-circle-xmark"></i>
+                            </button>
+                        </div>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </section>
+    </mat-card-content>
+</mat-card>

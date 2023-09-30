@@ -1,0 +1,10 @@
+.no-data {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+}
+
+.no-data span {
+   font-size: 14px;
+}

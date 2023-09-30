@@ -1,0 +1,55 @@
+<mat-card>
+    <mat-card-content class="h-100">
+        <div class="expenses-card-header d-flex flex-row justify-content-between">
+            <h4 class="expenses-card-title">Expense List</h4>
+            <div class="expenses-button-block d-flex flex-row">
+                <button mat-raised-button (click)="addModifyExpense()">Add</button>
+                <button mat-raised-button (click)="resetValues()">Reset</button>
+            </div>
+        </div>
+        <section class="expense-table custom-scrollbar">
+            <table mat-table matSort [dataSource]="dataSource">
+                <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef> No. </th>
+                    <td mat-cell *matCellDef="let element; let rowIndex = index"> {{rowIndex+1}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="cost">
+                    <th mat-header-cell mat-sort-header mat-sort-header *matHeaderCellDef> Cost </th>
+                    <td mat-cell *matCellDef="let element"> ${{element.cost}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="category">
+                    <th class="expense-table-category" mat-header-cell mat-sort-header *matHeaderCellDef> Category </th>
+                    <td class="expense-table-category" mat-cell *matCellDef="let element">
+                        <i [matTooltip]="getCategoryTooltip(element.category)" [ngClass]="getCategoryIcon(element.category)"
+                        [ngStyle]="{'color': getCategoryColor(element.category)}"></i>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="actions">
+                    <th class="expense-table-actions" mat-header-cell *matHeaderCellDef>
+                        Actions </th>
+                    <td class="expense-table-actions" mat-cell *matCellDef="let element; let rowIndex = index">
+                        <div class="d-flex flex-row justify-content-between">
+                            <button mat-icon-button (click)="addModifyExpense(element, rowIndex)" matTooltip="Modify">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button mat-icon-button (click)="removeExpense(element.name, rowIndex)" matTooltip="Delete">
+                                <i class="fa-solid fa-circle-xmark"></i>
+                            </button>
+                        </div>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </section>
+    </mat-card-content>
+</mat-card>

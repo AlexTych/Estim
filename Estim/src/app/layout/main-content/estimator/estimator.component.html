@@ -1,0 +1,38 @@
+<div class="estimator-main-container d-flex flex-column justify-content-between">
+    <breadcrumb [breadcrumbItem]="breadcrumb"></breadcrumb>
+    <div class="d-flex flex-row w-100 estimator-expenses-box">
+        <expenses-list class="w-50 expenses-list-box"></expenses-list>
+        <div class="w-50 expenses-total-box">
+            <div *ngIf="totalCategoryData" class="d-flex flex-column w-100 expenses-total-box-sum">
+                <percentage-calculator class="expenses-priority-block" [title]="'Expense Categories'"
+                    [percData]="totalCategoryData">
+                </percentage-calculator>
+                <div *ngFor="let i of evenExpenseNumbers" class="d-flex flex-row w-100">
+                    <total-block *ngFor="let el of totalCategoryData.slice(i,i+2); let idx = index"
+                        class="w-50 total-block" [totalEl]="el"></total-block>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row w-100 estimator-target-box">
+        <target-list class="w-50 target-list-box"></target-list>
+        <div *ngIf="totalPriorityData" class="w-50 target-total-box">
+            <percentage-calculator class="target-priority-block" [title]="'Target Priorities'"
+                [percData]="totalPriorityData">
+            </percentage-calculator>
+            <div class="d-flex flex-column w-100 target-total-box-sum">
+                <div *ngFor="let i of evenTargetNumbers" class="d-flex flex-row w-100">
+                    <total-block *ngFor="let el of totalPriorityData.slice(i,i+2); let idx = index"
+                        class="w-50 total-block" [totalEl]="el"></total-block>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row w-100 estimator-target-report-box">
+        <estimate-report class="w-50 estimator-target-report" [targets]="targetList" [expenses]="expenseList"
+            (durationChangeEvent)="updateTargetsDurationChartConfig($event)"></estimate-report>
+        <line-chart class="w-50 estimator-target-chart" [title]="'Time-to-Target trend'"
+            [chartConfigurations]="targetsLineChartConfig"></line-chart>
+    </div>
+    <content-footer></content-footer>
+</div>
