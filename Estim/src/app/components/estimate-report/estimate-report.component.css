@@ -8,6 +8,15 @@ mat-card {
     font-weight: 500;
 }
 
+.estimate-title span{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.estimate-title i {
+    margin-left: 5px;
+}
+
 .mdc-button {
     margin-left: 0 !important;
 }

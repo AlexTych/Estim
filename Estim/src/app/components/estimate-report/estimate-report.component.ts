@@ -17,6 +17,7 @@ export class EstimateReportComponent {
     savingsControl: FormControl = new FormControl(null, [Validators.min(0)]);
     tableElemets: Target[];
     noDataMessage: string = "No targets added.";
+    titleInfoTooltip: string = 'Calculates the estimated time until the next financial goal can be achieved.';
 
     @Input() targets: Target[];
     @Input() expenses: Expense[];

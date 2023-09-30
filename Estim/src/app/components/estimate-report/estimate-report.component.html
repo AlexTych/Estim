@@ -1,12 +1,15 @@
 <mat-card>
     <mat-card-content class="estimate-card-content">
-        <h4 class="estimate-title">Time-to-Target calculator</h4>
+        <div class="estimate-title">
+            <span>Time-to-Target calculator</span>
+            <i class="fa-regular fa-circle-question" [matTooltip]="titleInfoTooltip"></i>
+        </div>
         <div class="estimate-header d-flex flex-row">
             <mat-form-field>
                 <mat-label>Monthly Income</mat-label>
                 <input type="number" matInput [formControl]="incomeControl">
                 <mat-error *ngIf="incomeControl.hasError('min')">Income must be non-negative</mat-error>
-                <mat-error *ngIf="incomeControl.hasError('notStartingWithZero')">Income can not be
+                <mat-error *ngIf="incomeControl.hasError('notStartingWithZero')">Income cannot be
                     0</mat-error>
             </mat-form-field>
             <mat-form-field>

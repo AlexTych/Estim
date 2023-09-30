@@ -8,7 +8,7 @@
         <mat-label>Cost</mat-label>
         <input type="number" [max]="maxAllowedCost" matInput [formControl]="itemCostControl" (change)="onCostChange()" required>
         <mat-error *ngIf="itemCostControl.hasError('min')">Cost must be non-negative</mat-error>
-        <mat-error *ngIf="itemCostControl.hasError('notStartingWithZero')">Cost can not be
+        <mat-error *ngIf="itemCostControl.hasError('notStartingWithZero')">Cost cannot be
             0</mat-error>
     </mat-form-field>
     <ng-container *ngIf="data.dataType == 0; else categoryBlock">
